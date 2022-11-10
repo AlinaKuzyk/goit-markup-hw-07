@@ -1,0 +1,141 @@
+.page-footer {
+   background-color: var(--bg-color-hero-footer);
+}
+
+.page-footer__wrapper {
+   display: flex;
+   align-items: baseline;
+
+   padding-top: 60px;
+   padding-bottom: 60px;
+}
+
+.footer-navigation__link {
+   display: block;
+   margin-bottom: 20px;
+}
+
+.navigation__logo--white {
+   color: var(--hero-title-color);
+}
+
+.adr-list__item {
+   margin-bottom: 9px;
+   &:last-child {
+      margin-bottom: 0;
+   }
+}
+
+.adr-list__link {
+   color: var(--hero-title-color);
+   text-decoration: none;
+   font-style: normal;
+   font-size: 14px;
+   line-height: 1.71;
+   letter-spacing: 0.03em;
+
+   transition: color var(--animation);
+
+   &:hover,
+   &:focus {
+      color: var(--accent-color);
+   }
+}
+
+.adr-list__link--contact {
+   color: var(--link-auth-low-color);
+   text-decoration: none;
+   font-style: normal;
+   font-size: 14px;
+   line-height: 1.71;
+   letter-spacing: 0.03em;
+
+   transition: color var(--animation);
+
+   &:hover,
+   &:focus {
+      color: var(--accent-color);
+   }
+}
+
+.join {
+   margin-left: 70px;
+}
+
+.join__title{
+   margin-bottom: 20px;
+
+   font-weight: 700;
+   font-size: 14px;
+   line-height: 1.14;
+   letter-spacing: 0.03em;
+   text-transform: uppercase;
+   color: var(--hero-title-color);
+}
+
+.chain-footer__item {
+   width: 44px;
+   height: 44px;
+   
+   background-color: rgba(255, 255, 255, 0.1);
+
+   transition: background-color var(--animation);
+
+   &:hover,
+   &:focus {
+      background-color: var(--accent-color);
+   }
+}
+
+.chain-footer__link {
+   border-radius: 50%;
+   color: var(--hero-title-color);
+   transition: color var(--animation);
+   &:hover,
+   &:focus {
+      background-color: var(--accent-color);
+   }
+}
+
+.chain-footer__icon{
+   fill: currentColor;
+}
+
+.follow {
+   margin-left: 93px;
+}
+
+.submit {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.submit-form__input {
+   width: 358px;
+   height: 50px;
+
+   border-color: rgba(255, 255, 255, 0.3);
+   background-color: var(--bg-color-hero-footer);
+   color: var(--hero-title-color);
+}
+
+.submit-form__input::placeholder {
+   color: var(--link-auth-low-color);
+   font-size: 16px;
+   line-height: 1.25;
+}
+
+.submit__button {
+   position: relative;
+   display: flex;
+   align-items: center;
+   margin-left: 12px;
+
+   width: 200px;
+   height: 50px;
+}
+
+.submit__icon {
+   margin-left: 10px;
+}

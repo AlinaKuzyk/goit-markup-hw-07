@@ -1,0 +1,36 @@
+.work {
+   padding-top: 0;
+}
+
+.work__list {
+   display: flex;
+   flex-wrap: wrap;
+   align-items: center;
+   justify-content: center;
+}
+
+.work__item {
+   margin-right: 30px;
+   &:last-child {
+      margin-right: 0;
+   }
+}
+
+.work__item--pict {
+   position: relative;
+}
+
+.position__app {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+
+   position: absolute;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   height: 70px;
+   background-color: rgba(47, 48, 58, 0.8);
+   color: rgba(255, 255, 255, 1);
+}
+

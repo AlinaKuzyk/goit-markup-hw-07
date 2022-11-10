@@ -1,0 +1,158 @@
+/* стиль кнопок */
+
+.list-filter {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   margin: auto;
+}
+
+.list-filter__item {
+   display: flex;
+
+   margin-right: 8px;
+   margin-bottom: 50px;
+
+   &:last-child {
+      margin-right: 0;
+   }
+}
+
+.list-filter__button {
+   display: block;
+
+   padding-top: 6px;
+   padding-right: 22px;
+   padding-bottom: 6px;
+   padding-left: 22px;
+
+   border-radius: 4px;
+   border: none;
+
+   background-color: var(--secondary-bg-color);
+   cursor: pointer;
+   font-family: inherit;
+   font-weight: 500;
+   font-size: 16px;
+   line-height: 1.62;
+   text-align: center;
+   letter-spacing: 0.03em;
+
+   transition: background-color var(--animation);
+
+   &:hover,
+   &:focus {
+      background-color: var(--accent-color);
+      color: var(--hero-title-color);
+
+      box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 
+      0px 1px 2px rgba(0, 0, 0, 0.08), 
+      0px 2px 2px rgba(0, 0, 0, 0.12);
+
+   transition: box-shadow var(--animation), color var(--animation), background-color var(--animation);
+   }
+}
+
+/* Сітка з картками */
+.examples-list {
+   display: flex;
+   flex-wrap: wrap;
+   gap: 30px;
+}
+
+.examples-list__item {
+   flex-basis: calc((100% - 2 * 30px) / 3);
+}
+
+.examples-list__link {
+   display: block;
+   text-decoration: none;
+   color: inherit;
+
+   &:hover,
+   &:focus {
+      box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 
+      0px 4px 4px rgba(0, 0, 0, 0.06), 
+      1px 4px 6px rgba(0, 0, 0, 0.16);
+      transition: box-shadow var(--animation);
+    }
+}
+
+.overlay {
+   position: relative;
+
+   overflow: hidden;
+}
+
+.background::after {
+   content: '';
+   display: inline-block;
+
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   top: 0;
+   left: 0;
+
+   background-color: var(--overlay-card);
+   opacity: 0;
+   transform: translateY(100%);
+   transition: transform var(--animation), background-color var(--animation), opacity var(--animation);
+}
+
+.examples-list__link:hover .background::after,
+.examples-list__link:focus .background::after {
+   opacity: 1;
+   transform: translateY(0);
+}
+
+.background__text {
+   position: absolute;
+
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+
+   font-size: 18px;
+   line-height: 1.56;
+   letter-spacing: 0.03em; 
+
+   padding: 63px 24px;
+
+   color: rgba(255, 255, 255, 1);
+
+   opacity: 0;
+   transform: translateY(100%);
+   transition: transform var(--animation), opacity var(--animation), color var(--animation);
+   z-index: 2;
+}
+
+.examples-list__link:hover .background__text,
+.examples-list__link:focus .background__text {
+   opacity: 1;
+   transform: translateY(0);
+}
+
+.card {
+   padding: 20px 24px;
+   
+   border: 1px solid var(--border-examples-list);
+   border-top: none;
+}
+
+.card__title {
+   margin-bottom: 4px;
+
+   font-weight: 700;
+   font-size: 18px;
+   line-height: 2;
+   letter-spacing: 0.06em;
+}
+
+.card__examples {
+   color: var(--text-paragraph-color);
+   font-size: 16px;
+   line-height: 1.88;
+   letter-spacing: 0.03em;
+}
